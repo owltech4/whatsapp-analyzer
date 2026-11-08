@@ -72,6 +72,20 @@ streamlit run app.py
 
 O Streamlit abrirá a aplicação no navegador. Se o navegador não abrir automaticamente, use o endereço local mostrado no terminal.
 
+## Executável para Windows
+
+O pacote Windows inclui o aplicativo e suas dependências em uma pasta compactada. O Ollama e o modelo de IA continuam separados.
+
+Para criar o pacote no Windows, ative o ambiente virtual e execute:
+
+```powershell
+.\build_windows.ps1
+```
+
+O resultado será `dist/WhatsAppAnalyzer-windows.zip`. Extraia o ZIP inteiro e execute `WhatsAppAnalyzer.exe`; mantenha os arquivos da pasta juntos. O primeiro `.env` do pacote usa Ollama local em `localhost:11434` e pode ser editado ao lado do executável. O build não inclui nem publica `.env`, chaves de API ou conversas. O servidor fica limitado ao próprio computador (`127.0.0.1`).
+
+O workflow do GitHub também cria o pacote Windows e publica um artefato de build por 30 dias em cada pull request e execução na branch principal.
+
 ## Usar a aplicação
 
 1. Selecione um arquivo aceito na barra lateral.
@@ -142,4 +156,5 @@ whatsapp-analyzer/
 - `python-docx`: leitura de DOCX.
 - `openpyxl`: leitura de XLSX.
 - `python-pptx`: leitura de PPTX.
+
 
