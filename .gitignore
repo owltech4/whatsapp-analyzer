@@ -1,5 +1,8 @@
 .venv/
 venv/
+build/
+dist/
+*.spec
 __pycache__/
 *.py[cod]
 .env
@@ -9,3 +12,4 @@ data/*
 *.csv
 
 .env.openai
+
